@@ -57,22 +57,6 @@ Para o encontro 7, a rotina ou os resultados de referência de Index-Flood dever
 
 Cada pasta de aula receberá seu script Python (`.py`) ou notebook (`.ipynb`), acompanhado das instruções específicas de execução. Os arquivos de dados e resultados de execução são mantidos localmente.
 
-## Dados e estudo de caso
-
-A proposta de capacitação prevê a **bacia hidrográfica do Rio Araranguá, em Santa Catarina**, como estudo de caso. As estações, os períodos e as variáveis usados em cada prática serão documentados quando os materiais forem incorporados.
-
-O pacote BD01 disponibilizado para preparação do curso inclui:
-
-| Fonte / arquivo | Conteúdo identificado |
-| --- | --- |
-| ANA/Hidroweb — `vazoes.zip` | Séries diárias de vazão e indicador de consistência. |
-| Monitoramento disponibilizado pela EPAGRI — `Hidrologia.csv` | Precipitação, nível e vazão em registros horários, com disponibilidade variável por estação. |
-| Estação 2383 — Antônio Carlos, Bairro Usina | Temperatura do ar, umidade relativa, molhamento foliar e precipitação de uma hora. |
-| `dados_hidro_82_83_84.mdb` | Banco complementar das sub-bacias 82, 83 e 84, com registros hidrológicos e outras tabelas de monitoramento. |
-| `BDEpagri.xls` e arquivos SIG | Cadastro de estações e informações geográficas, incluindo seis sub-bacias de exemplo. |
-
-Esses conjuntos não constituem, automaticamente, uma base integrada da bacia do Araranguá. A associação espacial, a sobreposição temporal e a qualidade das séries precisam ser verificadas para cada exercício.
-
 ### Acesso e uso dos dados
 
 Segundo o `leiame.txt` do BD01, as séries de `vazoes.zip` foram obtidas do Hidroweb e são públicas. As demais séries históricas, inclusive o banco `.mdb`, estão sujeitas às restrições de uso e compartilhamento informadas para o curso.
@@ -87,19 +71,6 @@ Segundo o `leiame.txt` do BD01, as séries de `vazoes.zip` foram obtidas do Hidr
 4. Instale as dependências e utilize a versão de Python indicadas no material do encontro.
 5. Execute a atividade e mantenha os resultados na pasta local `resultados/`.
 
-As versões de Python, as bibliotecas e os comandos de instalação serão definidos após a incorporação dos scripts. A estrutura inicial ainda não contém código executável nem um ambiente de execução validado.
-
-## Inclusão dos próximos scripts
-
-Ao adicionar cada material, registrar na pasta da aula:
-
-- Objetivo e nome do arquivo principal.
-- Dados necessários, origem, unidades, resolução temporal e período utilizado.
-- Dependências e ordem de execução.
-- Saídas esperadas e critérios de avaliação.
-- Referência do código utilizado, quando houver.
-
-Usar caminhos relativos e documentar a separação entre treino, validação e teste. Antes de publicar notebooks, limpar saídas que contenham dados restritos. O `.gitignore` não remove dados já versionados nem conteúdo incorporado às células de um notebook.
 
 ## Equipe
 
