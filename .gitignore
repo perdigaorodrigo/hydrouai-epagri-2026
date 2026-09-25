@@ -29,3 +29,5 @@ desktop.ini
 *.pt
 *.pth
 *.ckpt
+
+!/02_Dados/BD01.zip
