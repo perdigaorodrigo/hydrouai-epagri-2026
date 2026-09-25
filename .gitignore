@@ -1,0 +1,31 @@
+# Dados locais: manter apenas a documentação
+/dados/*
+!/dados/README.md
+/resultados/*
+!/resultados/README.md
+BD01/
+BD01.zip
+*.mdb
+*.accdb
+
+# Ambiente Python e arquivos temporários
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Modelos e checkpoints gerados
+*.h5
+*.keras
+*.pt
+*.pth
+*.ckpt
