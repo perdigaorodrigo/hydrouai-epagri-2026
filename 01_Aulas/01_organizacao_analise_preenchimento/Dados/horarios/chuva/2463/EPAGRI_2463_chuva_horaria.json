@@ -1,0 +1,27 @@
+{
+  "bacia": "bacia_02",
+  "arquivo_origem": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\Estudos_bacia_02\\20261004_074113_244613\\02_horarios_precipitacao_nivel\\dados\\chuva\\2463\\EPAGRI_2463_chuva_horaria.csv",
+  "arquivo_final": "horarios\\chuva\\2463\\EPAGRI_2463_chuva_horaria.csv",
+  "periodo_curso": null,
+  "codigo_estacao": "2463",
+  "posicoes_internas": [
+    {
+      "codigo": "2463",
+      "nome": "Sto. A. da Imperatriz - V. do Braço - CASAN",
+      "longitude": -48.7903,
+      "latitude": -27.7583,
+      "fonte_posicao": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\BD_Epagri\\Hidrologia.csv",
+      "dentro_bacia": true
+    },
+    {
+      "codigo": "2463",
+      "nome": "Sto. A. da Imperatriz - V. do Braço - CASAN",
+      "longitude": -48.7903,
+      "latitude": -27.758299999999995,
+      "fonte_posicao": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\SIG\\Fluviometricas.shp::",
+      "dentro_bacia": true
+    }
+  ],
+  "posicao_espacial_ambigua": false,
+  "nota": "Sem preenchimento, agregação ou fusão de arquivos/fontes. Posições alternativas não têm validade temporal atribuída."
+}

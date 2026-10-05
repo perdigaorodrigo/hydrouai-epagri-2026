@@ -1,0 +1,63 @@
+{
+  "fonte": "Epagri",
+  "arquivo": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\BD_Epagri\\Hidrologia.csv",
+  "codigo_estacao": "2463",
+  "variavel": "Vazão (m3/s)",
+  "inicio": "2017-07-21 11:00:00",
+  "fim": "2026-09-14 16:00:00",
+  "registros": 80214,
+  "valores_validos": 79303,
+  "valores_ausentes": 911,
+  "datas_invalidas": 0,
+  "timestamps_duplicados": 0,
+  "passo_predominante": "0 days 01:00:00",
+  "registros_esperados_nominais": 80214,
+  "dias_no_periodo": 3343,
+  "dias_com_algum_dado": 3320,
+  "dias_sem_dado": 23,
+  "disponibilidade_diaria_pct": 99.31,
+  "maior_falha_dias": 12,
+  "negativos": 0,
+  "zeros": 0,
+  "minimo": 0.03,
+  "mediana": 3.55,
+  "maximo": 707.32,
+  "prioridade": true,
+  "unidade": "m3/s",
+  "serie_id": "f590d034c85bf207",
+  "tipo": "vazao",
+  "resolucao": "horaria",
+  "intervalos_no_passo_pct": 100.0,
+  "timestamps_validos_unicos": 79303,
+  "cobertura_nominal_pct": 98.86,
+  "dias_24_horas_observadas": 3239,
+  "maior_intervalo_sem_valor_horas": 312.0,
+  "arquivo_separado": "catalogo_dados\\vazao\\horaria\\2463\\f590d034c85bf207.csv",
+  "numero_posicoes_codigo": 2,
+  "posicoes": [
+    {
+      "codigo": "2463",
+      "longitude": -48.7903,
+      "latitude": -27.7583,
+      "nome": "Sto. A. da Imperatriz - V. do Braço - CASAN",
+      "fonte_posicao": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\BD_Epagri\\Hidrologia.csv",
+      "posicao_id": "pos_00021",
+      "numero_posicoes_codigo": 2
+    },
+    {
+      "codigo": "2463",
+      "longitude": -48.7903,
+      "latitude": -27.758299999999995,
+      "nome": "Sto. A. da Imperatriz - V. do Braço - CASAN",
+      "fonte_posicao": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\SIG\\Fluviometricas.shp::",
+      "posicao_id": "pos_00022",
+      "numero_posicoes_codigo": 2
+    }
+  ],
+  "equivalencias_documentadas": [
+    [
+      "2463",
+      "84207000"
+    ]
+  ]
+}

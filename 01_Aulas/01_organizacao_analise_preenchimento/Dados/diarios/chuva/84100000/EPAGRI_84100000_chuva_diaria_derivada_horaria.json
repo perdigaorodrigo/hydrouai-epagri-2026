@@ -1,0 +1,34 @@
+{
+  "bacia": "bacia_02",
+  "arquivo_origem": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\Estudos_bacia_02\\20261004_074113_244613\\02_horarios_precipitacao_nivel\\dados\\chuva\\84100000\\EPAGRI_84100000_chuva_horaria.csv",
+  "arquivo_final": "diarios\\chuva\\84100000\\EPAGRI_84100000_chuva_diaria_derivada_horaria.csv",
+  "periodo_curso": null,
+  "codigo_estacao": "84100000",
+  "posicoes_internas": [
+    {
+      "codigo": "84100000",
+      "nome": "Poço Fundo",
+      "longitude": -48.8019,
+      "latitude": -27.702800000000007,
+      "fonte_posicao": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\SIG\\Fluviometricas.shp:: / C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\SIG\\FluviometricasComDados.shp::",
+      "dentro_bacia": true
+    },
+    {
+      "codigo": "84100000",
+      "nome": "Poço Fundo",
+      "longitude": -48.8019,
+      "latitude": -27.7028,
+      "fonte_posicao": "C:\\Users\\afrod\\OneDrive\\Documents\\HydroUAI_git\\hydrouai-epagri-2026\\02_Dados\\BD01\\BD01\\BD_Epagri\\Hidrologia.csv",
+      "dentro_bacia": true
+    }
+  ],
+  "posicao_espacial_ambigua": false,
+  "nota": "Agregação por dia no fuso original. Duplicatas concordantes contam uma vez; horas conflitantes são ausentes. Dias insuficientes ficam NaN. Não houve preenchimento.",
+  "serie_id": "48ca7231acd1057b_diario_derivado",
+  "serie_id_horaria_origem": "48ca7231acd1057b",
+  "arquivo_horario_final": "horarios\\chuva\\84100000\\EPAGRI_84100000_chuva_horaria.csv",
+  "resolucao": "diaria",
+  "origem_resolucao": "horaria_agregada",
+  "metodo_agregacao": "soma",
+  "min_horas_validas_dia": 24
+}

@@ -1,0 +1,5 @@
+﻿codigo;nome;longitude;latitude;fonte_posicao;dentro_bacia
+2463;Sto. A. da Imperatriz - V. do Braço - CASAN;-48.7903;-27.7583;C:\Users\afrod\OneDrive\Documents\HydroUAI_git\hydrouai-epagri-2026\02_Dados\BD01\BD01\BD_Epagri\Hidrologia.csv;True
+2463;Sto. A. da Imperatriz - V. do Braço - CASAN;-48.7903;-27.758299999999995;C:\Users\afrod\OneDrive\Documents\HydroUAI_git\hydrouai-epagri-2026\02_Dados\BD01\BD01\SIG\Fluviometricas.shp::;True
+84100000;Poço Fundo;-48.8019;-27.702800000000007;C:\Users\afrod\OneDrive\Documents\HydroUAI_git\hydrouai-epagri-2026\02_Dados\BD01\BD01\SIG\Fluviometricas.shp:: / C:\Users\afrod\OneDrive\Documents\HydroUAI_git\hydrouai-epagri-2026\02_Dados\BD01\BD01\SIG\FluviometricasComDados.shp::;True
+84100000;Poço Fundo;-48.8019;-27.7028;C:\Users\afrod\OneDrive\Documents\HydroUAI_git\hydrouai-epagri-2026\02_Dados\BD01\BD01\BD_Epagri\Hidrologia.csv;True
