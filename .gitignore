@@ -23,9 +23,7 @@ __pycache__/
 Thumbs.db
 desktop.ini
 
-# Modelos e checkpoints gerados
-*.h5
-*.keras
+# Modelos e checkpoints gerados*.keras
 *.pt
 *.pth
 *.ckpt

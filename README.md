@@ -15,7 +15,6 @@ O curso está organizado em **oito encontros remotos de quatro horas**, totaliza
 - Explorar regionalização e transferência de modelos entre bacias.
 - Investigar, com ferramentas de IA explicável, os fatores associados ao desempenho e à transferabilidade dos modelos.
 
-
 ## Equipe
 
 Capacitação desenvolvida pela **Hydro-UAI** para a **EPAGRI**, com participação de Bruno Brentan, André Rodrigues e Rodrigo Perdigão nos encontros previstos.
