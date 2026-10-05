@@ -79,3 +79,5 @@ Capacitação desenvolvida pela **Hydro-UAI** para a **EPAGRI**, com participaç
 ## Uso dos materiais
 
 As condições de licença e redistribuição dos códigos serão definidas pela equipe responsável. As permissões de uso dos dados devem ser observadas independentemente das condições aplicáveis ao código.
+
+> Nota: A testar o fluxo de commits do GitHub Desktop para os projetos de Recursos Hídricos.
