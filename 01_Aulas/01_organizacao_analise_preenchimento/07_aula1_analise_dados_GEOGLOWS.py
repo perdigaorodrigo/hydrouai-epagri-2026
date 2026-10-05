@@ -29,7 +29,6 @@ DIRETORIO_AULA = Path(r'C:\Users\afrod\OneDrive\Documents\HydroUAI_git\hydrouai-
 BACIA = 'bacia_02'  # Rótulo dos gráficos; usar os arquivos da bacia correspondente.
 DIRETORIO_DADOS = DIRETORIO_AULA / 'Dados'
 DIRETORIO_SIG = DIRETORIO_AULA / 'SIG'
-DIRETORIO_PRODUTOS = DIRETORIO_DADOS / 'Produtos'  # CHIRPS/GEOGloWS previamente baixados.
 DIRETORIO_RESULTADOS = DIRETORIO_AULA / 'Resultados'
 DIRETORIO_CSVS_FINAIS = DIRETORIO_AULA / 'Dados_Preenchidos'  # Alterar para a pasta desejada.
 # Os dois CSVs finais são atualizados nessa pasta ao executar novamente.
@@ -79,7 +78,22 @@ PRODUTOS_LOCAIS = {}  # Por serie_id, quando precisar distinguir fontes.
 # Alternativa simples: configurar produtos por código da estação.
 # Arquivos já baixados; não ocorre download neste script.
 CHIRPS_POR_ESTACAO = {}
-GEOGLOWS_POR_ESTACAO = {}
+GEOGLOWS_POR_ESTACAO = {
+    '2463': {
+        'arquivo': DIRETORIO_DADOS / 'GEOGLOWS_Estacao_1_640447698_daily.csv',
+        'data': 'Data',
+        'valor': 'Vazao_GEOGLOWS',
+        'sep': ';',
+        'campo_codigo': None,
+        'codigo': None
+    }
+}
+# GEOGLOWS entra somente nas séries DIÁRIAS de vazão.
+# A correção adotada é multiplicativa pela razão das médias no período de ajuste:
+# Q_GEO_corr = Q_GEO * (media(Q_obs) / media(Q_GEO)).
+# Na validação, o fator é calculado sem os blocos ocultados; no preenchimento final,
+# ele é recalculado com todas as observações originais disponíveis.
+
 # Exemplo (retirar # e ajustar caminho/código quando tiver os arquivos):
 # CHIRPS_POR_ESTACAO = {'2463': {
 #     'arquivo': DIRETORIO_PRODUTOS / 'CHIRPS_diario_2463.csv',
@@ -630,6 +644,67 @@ def estimar_propria_serie(contexto, treino, tipo):
     return estimativas, detalhes
 
 
+def corrigir_vies_multiplicativo(y_fit, produto, index):
+    """Correção simples de viés para GEOGLOWS pela razão das médias.
+
+    O fator é estimado somente onde y_fit e GEOGLOWS coexistem. Assim, durante a
+    validação, os blocos artificialmente ocultados não participam da correção.
+    """
+    pares = pd.concat([serie_float(y_fit).rename('obs'),
+                       serie_float(produto).rename('geo')], axis=1).dropna()
+    saida = pd.Series(np.nan, index=index, dtype=float)
+    if len(pares) < MIN_PARES_TREINO:
+        return saida, {'status': 'treino_insuficiente', 'n_treino': len(pares),
+                       'fator_correcao': np.nan}
+    media_geo = pares.geo.mean()
+    if not np.isfinite(media_geo) or media_geo == 0:
+        return saida, {'status': 'media_geoglows_invalida', 'n_treino': len(pares),
+                       'fator_correcao': np.nan}
+    fator = pares.obs.mean() / media_geo
+    valid = produto.notna()
+    saida.loc[valid] = serie_float(produto).loc[valid] * fator
+    return saida, {'status': 'ajustado_razao_medias', 'n_treino': len(pares),
+                   'media_observada': float(pares.obs.mean()),
+                   'media_geoglows': float(media_geo),
+                   'fator_correcao': float(fator)}
+
+
+def diagnostico_geoglows_1a1(observado, geoglows, sid, pasta):
+    """Diagnóstico 1:1 do GEOGLOWS bruto e após correção multiplicativa."""
+    obs = serie_float(observado)
+    geo = serie_float(geoglows)
+    pares = pd.concat([obs.rename('observado'), geo.rename('GEOGLOWS_bruto')], axis=1).dropna()
+    if len(pares) < 2:
+        print(rotulo_serie(sid), '— GEOGLOWS: pares insuficientes para análise 1:1.')
+        return
+    fator = pares.observado.mean() / pares.GEOGLOWS_bruto.mean() if pares.GEOGLOWS_bruto.mean() != 0 else np.nan
+    pares['GEOGLOWS_corrigido'] = pares.GEOGLOWS_bruto * fator
+    linhas = []
+    for nome in ['GEOGLOWS_bruto', 'GEOGLOWS_corrigido']:
+        a, b = pares.observado, pares[nome]
+        den = ((a-a.mean())**2).sum()
+        r = a.corr(b) if a.nunique()>1 and b.nunique()>1 else np.nan
+        linhas.append({'metodo': nome, 'n': len(a), 'fator_correcao': 1.0 if nome.endswith('bruto') else fator,
+                       'r_Pearson': r, 'R2_correlacao': r**2 if pd.notna(r) else np.nan,
+                       'MAE': (a-b).abs().mean(), 'RMSE': np.sqrt(((a-b)**2).mean()),
+                       'NSE': 1-((a-b)**2).sum()/den if den>0 else np.nan,
+                       'PBIAS_pct': 100*(b-a).sum()/a.sum() if a.sum()!=0 else np.nan})
+    pd.DataFrame(linhas).to_csv(pasta/'geoglows_diagnostico_1a1.csv', sep=';', index=False, encoding='utf-8-sig')
+    pares.to_csv(pasta/'geoglows_pares_1a1.csv', sep=';', index_label='data_hora', encoding='utf-8-sig')
+    fig, axes = plt.subplots(1, 2, figsize=(11, 5))
+    valores = np.r_[pares.observado.to_numpy(), pares.GEOGLOWS_bruto.to_numpy(), pares.GEOGLOWS_corrigido.to_numpy()]
+    minimo, maximo = np.nanmin(valores), np.nanmax(valores)
+    for ax, nome, titulo in zip(axes, ['GEOGLOWS_bruto','GEOGLOWS_corrigido'], ['GEOGLOWS bruto','GEOGLOWS com correção de viés']):
+        ax.scatter(pares.observado, pares[nome], s=12, alpha=.45)
+        ax.plot([minimo,maximo],[minimo,maximo],'k--',lw=1,label='1:1')
+        ax.set_xlabel('Vazão observada (m³/s)'); ax.set_ylabel('Vazão GEOGLOWS (m³/s)')
+        ax.set_title(titulo); ax.set_aspect('equal', adjustable='box'); ax.legend(fontsize=8)
+    fig.suptitle(rotulo_serie(sid) + ' — análise 1:1 GEOGLOWS')
+    mostrar(fig, f'diarios_{sid}_GEOGLOWS_1a1')
+    print('\nGEOGLOWS — análise 1:1:', rotulo_serie(sid))
+    print(pd.DataFrame(linhas).to_string(index=False))
+
+
 def estimar_metodos(context, y_fit, references, products, tipo):
     context, y_fit = serie_float(context), serie_float(y_fit)
     references = references.apply(serie_float)
@@ -683,8 +758,13 @@ def estimar_metodos(context, y_fit, references, products, tipo):
         info = [r for r in info if r['metodo'] not in ['regressao_linear', 'knn']] + detalhes
     for name, product in products.items():
         predictions[name + '_bruto'] = product.copy()
-        predictions[name + '_corrigido'], details = ajustar_regressao(y_fit, product, context.index)
-        info.append({'metodo': name + '_corrigido', **details})
+        if name.upper() == 'GEOGLOWS' and tipo == 'vazao':
+            predictions[name + '_corrigido'], details = corrigir_vies_multiplicativo(
+                y_fit, product, context.index)
+            info.append({'metodo': name + '_corrigido', 'correcao': 'razao_das_medias', **details})
+        else:
+            predictions[name + '_corrigido'], details = ajustar_regressao(y_fit, product, context.index)
+            info.append({'metodo': name + '_corrigido', 'correcao': 'regressao_linear', **details})
     if NAO_NEGATIVO_P_Q and tipo in ['chuva', 'vazao']:
         predictions = {name: values.clip(lower=0) for name, values in predictions.items()}
     return pd.DataFrame(predictions, index=context.index), pd.DataFrame(info)
@@ -819,6 +899,9 @@ def validar_finais(selecao):
         metricas = metricas_validacao(y, pred, mask_completa)
         pasta = RESULTADOS / selecao['grupo'] / sid
         pasta.mkdir(parents=True, exist_ok=True)
+        # Diagnóstico 1:1 usa apenas pares originalmente observados e é separado da validação.
+        if selecao['grupo'] == 'diarios' and obj['catalogo']['tipo'] == 'vazao' and 'GEOGLOWS' in produtos:
+            diagnostico_geoglows_1a1(y, produtos['GEOGLOWS'], sid, pasta)
         metricas.to_csv(pasta / 'validacao.csv', sep=';', index=False)
         parametros.to_csv(pasta / 'parametros_validacao.csv', sep=';', index=False)
         teste = pred.loc[ocultos].copy()
@@ -1284,9 +1367,10 @@ validacao_diaria = validar_finais(selecao_diaria)
 # Se houver várias séries da mesma estação/variável, usar o serie_id.
 # Opções: media_movel, regressao_linear, knn; produtos locais: CHIRPS_bruto,
 # CHIRPS_corrigido, GEOGLOWS_bruto, GEOGLOWS_corrigido.
+# GEOGLOWS_corrigido usa correção multiplicativa pela razão das médias.
 # Informar um método para cada série com lacunas; climatologia completa as falhas restantes.
 METODOS_DIARIOS = {('2463', 'chuva'): 'regressao_linear',
-                        ('2463', 'vazao'): 'media_movel', ('84100000', 'chuva'): 'knn'}
+                        ('2463', 'vazao'): 'GEOGLOWS_bruto', ('84100000', 'chuva'): 'knn'}
 preencher_finais(selecao_diaria, validacao_diaria, METODOS_DIARIOS)
 
 # %% 29. HORÁRIOS — selecionar as estações que continuarão
@@ -1316,7 +1400,8 @@ preencher_finais(selecao_horaria, validacao_horaria, METODOS_HORARIOS)
 # Falhas consecutivas são reconstruídas recursivamente, separadamente por método,
 # limitadas por MAX_FALHA_AUTORREFERENCIA. Sem histórico suficiente, ficam NaN.
 # Produtos diários são opções adicionais: GEOGLOWS_bruto/GEOGLOWS_corrigido
-# para vazão; CHIRPS_bruto/CHIRPS_corrigido para chuva. Correção linear com observações não ocultadas na validação.
+# para vazão; CHIRPS_bruto/CHIRPS_corrigido para chuva. GEOGLOWS usa razão das médias;
+# o fator é estimado apenas com observações não ocultadas na validação.
 # Escolher o nome do método em METODOS_DIARIOS após examinar a validação.
 # Preencher todo o período; produtos diários não são desagregados em horas.
 
