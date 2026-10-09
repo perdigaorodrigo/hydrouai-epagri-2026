@@ -1,0 +1,7 @@
+numpy
+pandas>=1.5
+matplotlib>=3.5
+scipy
+scikit-learn
+
+# pip install -r "C:\caminho\da\pasta\bibliotecas.txt"
