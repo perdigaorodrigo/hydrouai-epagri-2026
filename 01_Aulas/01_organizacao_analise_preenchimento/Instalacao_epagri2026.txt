@@ -1,0 +1,61 @@
+CRIAÇÃO DO AMBIENTE E INSTALAÇÃO DAS BIBLIOTECAS
+Curso EPAGRI 2026 - Scripts 07 e 10
+
+Abra o Anaconda Prompt e execute os comandos abaixo, um por vez.
+
+
+1. CRIAR O AMBIENTE
+
+Pule este comando se o ambiente epagri2026 já existir.
+
+conda create -n epagri2026 --override-channels -c conda-forge python=3.11
+
+Quando aparecer Proceed ([y]/n)?, digite y e pressione Enter.
+
+
+2. ATIVAR O AMBIENTE
+
+conda activate epagri2026
+
+A linha de comando deve começar com (epagri2026).
+
+
+3. INSTALAR AS BIBLIOTECAS PRINCIPAIS
+
+Copie o comando inteiro abaixo em uma única linha:
+
+conda install --override-channels -c conda-forge numpy pandas matplotlib geopandas shapely pyproj pyogrio scikit-learn spyder-kernels
+
+Confirme com y quando solicitado e aguarde a conclusão.
+
+
+4. INSTALAR O GEOGLOWS
+
+Com o ambiente epagri2026 ainda ativado, execute:
+
+python -m pip install geoglows
+
+Aguarde a instalação ser concluída.
+
+5. INSTALAR AMBIENTE DE PROGRAMAÇÃO
+
+conda install spyder
+
+6. VERIFICAR A INSTALAÇÃO
+
+Execute:
+
+python -c "import geoglows; print('GEOGLOWS instalado com sucesso')"
+
+
+6. LINKS ÚTEIS — GEOGLOWS
+
+Para consultar o GEOGLOWS, verificar os trechos de rios e conferir o River ID utilizado no código:
+
+GEOGLOWS:
+https://geoglows.ecmwf.int/
+
+GEOGLOWS River Forecast System (RFS):
+https://apps.geoglows.org/rfs
+
+Antes de utilizar uma série GEOGLOWS, confira se o River ID selecionado corresponde ao trecho do curso d'água de interesse.
