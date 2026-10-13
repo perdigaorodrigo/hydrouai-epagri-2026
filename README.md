@@ -25,7 +25,9 @@ As condições de licença e redistribuição dos códigos serão definidas pela
 
 ## Gravação das aulas
 
-Aula 1: https://drive.google.com/file/d/1wrqHnbSfDSzABp1BiEVK8tECsMqjVAic/view?usp=sharing
+Aula 1 (05/10/2026): https://drive.google.com/file/d/1wrqHnbSfDSzABp1BiEVK8tECsMqjVAic/view?usp=sharing
 
-Aula 2: https://drive.google.com/file/d/1JmZl5M67l4qY3YjlGb8YOLYPWG00XgAi/view?usp=sharing
+Aula 2 (09/10/2026): https://drive.google.com/file/d/1JmZl5M67l4qY3YjlGb8YOLYPWG00XgAi/view?usp=sharing
+
+Aula 3 (13/10/2026): https://drive.google.com/file/d/1ShsHmwbawYUDXymj66CsrDU29cdRvIWR/view?usp=sharing
 
