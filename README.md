@@ -8,12 +8,12 @@ O curso está organizado em **oito encontros remotos de quatro horas**, totaliza
 
 ## Objetivos
 
-- Organizar, avaliar e preparar séries hidrológicas para aplicações de IA.
-- Aplicar e avaliar técnicas de preenchimento de falhas.
-- Desenvolver modelos MLP e LSTM para problemas hidrológicos.
-- Avaliar estratégias específicas para estiagens e cheias.
-- Explorar regionalização e transferência de modelos entre bacias.
-- Investigar, com ferramentas de IA explicável, os fatores associados ao desempenho e à transferabilidade dos modelos.
+* Organizar, avaliar e preparar séries hidrológicas para aplicações de IA.
+* Aplicar e avaliar técnicas de preenchimento de falhas.
+* Desenvolver modelos MLP e LSTM para problemas hidrológicos.
+* Avaliar estratégias específicas para estiagens e cheias.
+* Explorar regionalização e transferência de modelos entre bacias.
+* Investigar, com ferramentas de IA explicável, os fatores associados ao desempenho e à transferabilidade dos modelos.
 
 ## Equipe
 
@@ -22,3 +22,10 @@ Capacitação desenvolvida pela **Hydro-UAI** para a **EPAGRI**, com participaç
 ## Uso dos materiais
 
 As condições de licença e redistribuição dos códigos serão definidas pela equipe responsável. As permissões de uso dos dados devem ser observadas independentemente das condições aplicáveis ao código.
+
+## Gravação das aulas
+
+Aula 1: https://drive.google.com/file/d/1wrqHnbSfDSzABp1BiEVK8tECsMqjVAic/view?usp=sharing
+
+Aula 2: https://drive.google.com/file/d/1JmZl5M67l4qY3YjlGb8YOLYPWG00XgAi/view?usp=sharing
+
