@@ -22,8 +22,8 @@ PASTA = Path(__file__).resolve().parent if '__file__' in globals() else Path.cwd
 ARQUIVO = PASTA / 'series_horarias_preenchidas.csv'
 SAIDA = PASTA / 'resultados_LSTM_chuva_incerteza'
 COL_DATA, COL_P, COL_Q = 'data_hora', ['2463_P', '84100000_P'], '2463_Q'
-ENTRADAS = 'P'  # 'P' ou 'PQ'
-HORIZONTES_H, JANELAS_H_GRID = [6], [24]
+ENTRADAS = 'PQ'  # 'P' ou 'PQ'
+HORIZONTES_H, JANELAS_H_GRID = [3], [24]
 CAMADAS_GRID, UNIDADES_GRID = [1], [32]
 PCT_TREINO, PCT_VALIDACAO, PCT_TESTE = 70, 15, 15
 EPOCAS_MAX, BATCH_SIZE, LR_INICIAL = 100, 4320, .001
@@ -51,7 +51,7 @@ EXPERIMENTOS = [
 # Exemplo: ['E0_base', 'E1_chuva_acumulada', 'E2_GMM_sem_chuva']
 MODELOS_TREINAR = [
 
-    'E0_base',
+    'E2_MC_sem_chuva',
     'E2_GMM_sem_chuva',
 ]
 # Para executar somente um experimento, use, por exemplo:
@@ -80,7 +80,7 @@ N_EVENTOS, JANELA_ANTES_PICO_H, JANELA_DEPOIS_PICO_H = 1, 48, 48
 HORAS_PLOT_TESTE, MAX_BATCHES_HACHURADOS = None, None
 # Metricas probabilisticas: faixa central fixa de 90% (quantis 0.05 e 0.95).
 UNIDADE_Q = 'm³/s'  # Ajuste se a coluna de vazao estiver em outra unidade.
-LIMIAR_CHEIA = 50  # Informe uma vazao; None usa o percentil abaixo NO TREINO.
+LIMIAR_CHEIA = 80  # Informe uma vazao; None usa o percentil abaixo NO TREINO.
 PERCENTIL_LIMIAR_CHEIA = 95  # Percentil estatistico: cerca de 5% acima no treino.
 # Esse limiar automatico e didatico; nao representa uma cota oficial de alerta.
 # Brier do MC: fracao de N_MC previsoes acima do limiar.
