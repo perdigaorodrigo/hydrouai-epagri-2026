@@ -1,0 +1,159 @@
+AULA 7 — REGIONALIZAÇÃO DE MÍNIMAS E INDEX-FLOOD
+
+ARQUIVOS PRINCIPAIS
+1. Regionalizacao_Minimas.py
+   Q90 e Q98 (configuráveis), seleção das séries, filtro por UF, mapas,
+   k-means e Ward, curvas de permanência por cluster, quatro formas de
+   regressão, aplicação na bacia reservada e validação espacial.
+   Não calcula mínimas anuais nem Q7,10. Não depende do H1 das máximas.
+
+2. Regionalizacao_IndexFlood.py
+   Máximas das vazões médias diárias anuais, índice local (média das máximas),
+   seleção das séries, filtro por UF, mapas, k-means e Ward, normalização
+   de CADA posto por seu índice, D_i e H1 por cluster, GEV e Pearson III,
+   regressões do índice e Q(T) por cluster, alvo reservado e validação.
+   Não calcula vazões de permanência.
+
+Cada .py contém todas as suas funções. Um NÃO importa nem executa o outro.
+Não é necessário manter o script combinado anterior para executar estes dois.
+Os arquivos de dados e a pasta mapas permanecem externos aos scripts.
+
+INÍCIO NO SPYDER
+Extraia o ZIP completo e abra um dos .py dentro da pasta aula 7_index_flood.
+Use um console reiniciado quando mudar de script ou de configuração.
+Execute as células 00, 00A, 00B, 00C, 00D, 00E e depois 01 em diante.
+Executar o arquivo inteiro também é possível.
+
+No ambiente epagri2026, os pacotes são os mesmos da versão anterior:
+  numpy, pandas, scipy, scikit-learn, matplotlib, openpyxl
+  lmoments3==1.0.8 adicionalmente para H1/GEV/Pearson III no index-flood.
+Instalação a partir da pasta extraída:
+  python -m pip install -r requirements.txt
+Não são usados GeoPandas, Cartopy ou módulos Python próprios externos.
+
+DADOS
+Os diretórios Windows informados na conversa foram preservados em cada .py.
+Para testar a estação 60010000 incluída no pacote:
+  USAR_AMOSTRA_ANEXADA = True
+Para ler o conjunto completo nas suas pastas:
+  USAR_AMOSTRA_ANEXADA = False
+A amostra tem somente uma série de vazão. Ela permite testar leitura,
+seleção e estatísticas locais, mas não formar clusters regionais.
+
+FILTROS E AJUSTES INDEPENDENTES
+Cada script tem seus próprios controles na célula 00:
+  ANO_INICIAL_ANALISE = 1980
+  ANO_FINAL_ANALISE = 2024
+  ANOS_MINIMOS = 10
+  MAX_FALHAS_PERIODO_PCT = 10.0
+  MAX_FALHAS_ANO_PCT = 10.0
+  ESTADOS_INCLUIR = None
+  ATRIBUTOS_CLUSTER = ['precip_mm_ano', 'pet_mean', 'slope_mean']
+  K = 5
+  METODO_REGIONAL = 'kmeans'
+
+Esses defaults preservam a última versão. Os dois scripts recalculam seus
+próprios grupos; nenhum reutiliza os clusters salvos pelo outro.
+Se base, atributos, K e semente forem iguais, os agrupamentos podem coincidir.
+A separação dos scripts NÃO força artificialmente regiões diferentes.
+Pode-se escolher atributos e K distintos para cada finalidade.
+
+ESTADOS_INCLUIR = ['SC'] seleciona postos localizados em Santa Catarina.
+Também aceita ['PR', 'SC', 'RS']; None desativa o recorte.
+O filtro identifica a UF do posto, não a contenção de toda a bacia na UF.
+Depende do arquivo mapas/brasil_uf_ibge.geojson, incluído no pacote.
+
+A janela global inclui TODOS os dias de 01/jan/início até 31/dez/fim.
+ANOS_MINIMOS conta anos que atendem à tolerância anual de falhas.
+Q90/Q98 usam todos os dias válidos da janela nas séries aprovadas; não são
+calculadas só nos anos aceitos para a contagem de duração.
+No index-flood, somente anos aceitos pelo critério anual fornecem máximas.
+A tolerância de 10% anual foi preservada, não recomendada como garantia de
+qualidade: uma cheia pode ocorrer durante as falhas. A alteração para 0%
+deve ser um experimento explícito e mudará os anos e postos disponíveis.
+
+ONDE OS RESULTADOS SÃO SALVOS
+Por padrão, se o .py estiver dentro de aula 7_index_flood, essa é PASTA_AULA.
+Se apenas o .py for copiado para outra pasta, ele criará aula 7_index_flood
+como subpasta ao lado do script. Para um endereço fixo, altere PASTA_AULA.
+
+  aula 7_index_flood/
+    Regionalizacao_Minimas.py
+    Regionalizacao_IndexFlood.py
+    mapas/brasil_uf_ibge.geojson
+    amostra_camels/
+    resultados/
+      minimas/<execução>/
+        config.json
+        resumo.json
+        tab/                   inventário, seleção, clusters e validação
+        fig/                   gráficos gerais e mapas
+        clusters/C01/tab/      Q90/Q98, equações e aplicação do cluster
+        clusters/C01/fig/      permanência e ajustes do cluster
+        clusters/C02/...
+      indexflood/<execução>/
+        config.json
+        resumo.json
+        tab/                   tabelas gerais e comparação de métodos
+        fig/                   gráficos gerais e mapas
+        clusters/C01/tab/      máximas, séries normalizadas, H1, Di,
+                               distribuições, equações e Q(T)
+        clusters/C01/fig/      CDFs, H1, L-CVs, L-momentos e crescimento
+        clusters/C02/...
+
+Cada execução recebe data/hora própria. Uma análise não sobrescreve a outra.
+Não há gravação de resultados em Path.home()/resultados_regionalizacao.
+São usados nomes curtos e caminhos estendidos para gravação no Windows,
+sem mudar a pasta escolhida nem modificar o Registro do sistema.
+
+CLUSTERS E GRUPOS PEQUENOS
+K-means e Ward são calculados e comparados nos dois scripts.
+METODO_REGIONAL escolhe qual partição alimenta as aplicações por cluster.
+O outro método fica disponível nos mapas e tabelas de comparação; no script
+index-flood, H1 também é calculado para ambos.
+Os grupos candidatos podem ser mapeados mesmo quando algum tem poucos postos.
+Grupos com n abaixo de MIN_BACIAS_POR_GRUPO recebem um registro de ajuste
+indisponível; não desativam silenciosamente os demais grupos.
+K não é reduzido automaticamente após um filtro por estado.
+
+MODELOS E INTERPRETAÇÃO
+As regressões simples usam área. As múltiplas usam área e precipitação.
+Modelos potenciais usam log e retransposição pelo fator de smearing.
+Q90/Q98 nulas são preservadas: um modelo potencial com alvo zero é rejeitado
+explicitamente, sem acrescentar uma constante arbitrária.
+Previsões lineares negativas são sinalizadas. No index-flood, índice previsto
+não positivo não é convertido em Q(T).
+
+No index-flood, cada cluster tem uma curva regional adimensional e suas
+próprias equações do índice. Q(T) = índice local estimado * gR(T) do MESMO
+cluster. Os CSVs de Q(T) dos postos de treinamento são resultados de AJUSTE.
+A coluna Q_indice_observado é uma estimativa com índice amostral e curva
+regional, não um quantil de cheia diretamente observado.
+
+D_i e H1 são diagnósticos; esta separação não altera sua formulação.
+Não há remoção automática de estações para alcançar H1 < 1.
+H1 alto é identificado como exploratório. Falha numérica de H1 é registrada
+como 'não calculado', e não como 'heterogênea'.
+H1, L-momentos, D_i e extração de máximas foram preservados da versão-base.
+Não são implementados Z_DIST, H2, H3 ou intervalos completos de incerteza.
+GEV e Pearson III continuam como distribuições candidatas; não há aprovação
+automática de aderência nem interpretação de H1 como teste de baixas vazões.
+
+VALIDAÇÃO
+Uma bacia pode ser reservada antes dos ajustes. Nos demais postos,
+a validação retira um posto por vez e refaz transformação, padronização,
+agrupamento e regressão sem ele. No index-flood, refaz também curva e H1.
+Os hiperparâmetros são fixados antes da validação; usar o desempenho dela
+para escolhê-los exige uma avaliação externa para estimar generalização.
+O modo global em mínimas, quando habilitado, é só uma referência. As métricas
+pareadas usam os mesmos postos com previsão regional e global disponíveis.
+
+FONTES E CONTINUIDADE
+Base desta reorganização: Regionalizacao_CAMELS_Filtro_UF.py enviado/gerado
+na conversa. A malha IBGE foi copiada do pacote anterior, sem alteração.
+Referências já adotadas na aula:
+- Hosking e Wallis (1997), Regional Frequency Analysis.
+- Cassalho et al. (2019), DOI 10.1002/hyp.13388.
+- Cassalho et al. (2019), DOI 10.1111/jfr3.12453.
+Esta entrega reorganiza o código; não substitui uma avaliação científica
+completa das estações, agrupamentos e modelos.

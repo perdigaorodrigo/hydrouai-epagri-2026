@@ -1,0 +1,1 @@
+conda install -c conda-forge numpy pandas scipy scikit-learn matplotlib lmoments3 openpyxl
