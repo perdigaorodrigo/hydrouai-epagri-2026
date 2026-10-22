@@ -36,26 +36,26 @@ except ImportError:
     distr = None
     warnings.warn('lmoments3 ausente: leitura e regressões continuam disponíveis, mas H1/GEV/PE3 exigem python -m pip install lmoments3==1.0.8.')
 
-# Cada script possui sua própria configuração: não lê resultados do outro.
-PASTA = Path(__file__).resolve().parent if '__file__' in globals() else Path.cwd()
-# O ZIP contém uma única pasta "aula 7_index_flood". Ao copiar apenas o .py
-# para outra pasta, a subpasta da aula será criada ao lado do script.
-PASTA_AULA = PASTA if PASTA.name == 'aula 7_index_flood' else PASTA / 'aula 7_index_flood'
-# Para fixar outro endereço, altere SOMENTE PASTA_AULA, por exemplo:
-# PASTA_AULA = Path(r'C:\\aula 7_index_flood')
+# %% 01 | CONFIGURAÇÕES — ALTERE AQUI
 
-PASTA_CAMELS = Path(
-    r'C:\Users\afrod\OneDrive\Documents\HydroUAI_git'
-    r'\hydrouai-epagri-2026\01_Aulas\07_index_flood_transfer_learning'
-    r'\epagri\epagri\Info Bacias - CAMELS'
+# Usa a pasta onde está o script.
+# Sem __file__, usa o diretório de trabalho atual.
+PASTA = (
+    Path(__file__).resolve().parent
+    if '__file__' in globals()
+    else Path.cwd()
 )
-USAR_AMOSTRA_ANEXADA = False
-if USAR_AMOSTRA_ANEXADA:
-    PASTA_CAMELS = PASTA / 'amostra_camels'
+
+PASTA_AULA = PASTA
+PASTA_CAMELS = PASTA / 'amostra_camels'
+
 ARQUIVO_ATRIBUTOS = PASTA_CAMELS / 'Caracteristicas_bacias_CAMELS.xlsx'
 PASTA_VAZAO = PASTA_CAMELS / 'Vazão'
 PASTA_PRECIPITACAO = PASTA_CAMELS / 'Precipitação'
+
 BUSCAR_EM_SUBPASTAS = True
+
+print(f'Pasta dos dados: {PASTA_CAMELS}')
 
 # Filtros preservados da última versão do script.
 ANO_INICIAL_ANALISE = 1980
