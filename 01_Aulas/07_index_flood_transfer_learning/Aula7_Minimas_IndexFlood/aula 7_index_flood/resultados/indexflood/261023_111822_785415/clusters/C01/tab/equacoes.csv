@@ -1,0 +1,5 @@
+﻿regiao,alvo,forma,n_bacias,status,motivo
+1,indice_m3s,linear_simples,3,não ajustado,Menos de 5 postos neste grupo.
+1,indice_m3s,linear_multipla,3,não ajustado,Menos de 5 postos neste grupo.
+1,indice_m3s,potencial_simples,3,não ajustado,Menos de 5 postos neste grupo.
+1,indice_m3s,potencial_multipla,3,não ajustado,Menos de 5 postos neste grupo.

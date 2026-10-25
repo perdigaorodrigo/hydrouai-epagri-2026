@@ -1,0 +1,2 @@
+modelo;horizonte_d;janela_d;camadas;unidades;MSE_validacao;RMSE_validacao;NSE_validacao;melhor_epoca;epocas_executadas
+LSTM;0;15;2;32;2.009111166000366;1.4174311856313753;0.3870654959951795;98;100

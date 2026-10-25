@@ -1,0 +1,5 @@
+﻿metodo,regiao,id_bacia,D_i,limiar_10pct,sinalizado,observacao
+kmeans,3,70100000,0.9999999999999991,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+kmeans,3,70300000,0.9999999999999997,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+kmeans,3,71200000,1.0000000000000007,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+kmeans,3,71250000,0.9999999999999998,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."

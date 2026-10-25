@@ -1,0 +1,36 @@
+{
+  "n_postos_inventario": 54,
+  "n_treino": 42,
+  "clusters_executados": true,
+  "bacia_alvo": "84949000",
+  "tempos_retorno": [
+    2.0,
+    5.0,
+    10.0,
+    20.0,
+    50.0,
+    100.0
+  ],
+  "n_validacao": 42,
+  "H1_calculados": 0,
+  "Z_DIST_implementado": false,
+  "analise": "indexflood",
+  "pasta": "\\\\?\\C:\\Users\\taisf\\Documents\\GitHub\\hydrouai-epagri-2026\\01_Aulas\\07_index_flood_transfer_learning\\Aula7_Minimas_IndexFlood\\aula 7_index_flood\\resultados\\indexflood\\261023_111822_785415",
+  "K": 7,
+  "metodo_regional": "kmeans",
+  "atributos_cluster": [
+    "precip_mm_ano",
+    "slope_mean",
+    "elev_gauge",
+    "gauge_lat",
+    "gauge_lon"
+  ],
+  "estados": [
+    "SC",
+    "PR"
+  ],
+  "variaveis_regressao": [
+    "area_km2"
+  ],
+  "n_figuras": 29
+}

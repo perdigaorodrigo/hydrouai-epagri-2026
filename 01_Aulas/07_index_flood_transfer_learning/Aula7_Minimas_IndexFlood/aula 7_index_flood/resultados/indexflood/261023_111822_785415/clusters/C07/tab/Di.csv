@@ -1,0 +1,2 @@
+﻿metodo,regiao,id_bacia,D_i,limiar_10pct,sinalizado,observacao
+kmeans,7,82770000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.

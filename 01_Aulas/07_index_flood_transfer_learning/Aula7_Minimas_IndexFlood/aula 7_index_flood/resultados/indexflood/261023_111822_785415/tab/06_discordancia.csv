@@ -1,0 +1,85 @@
+﻿metodo,regiao,id_bacia,D_i,limiar_10pct,sinalizado,observacao
+kmeans,1,64360000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+kmeans,1,64380000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+kmeans,1,64508500,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+kmeans,2,64442800,1.6364239487588468,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,64453000,1.4664445824033288,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,64477600,1.2401687105924,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,65095000,0.47688998103401264,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,65135000,1.64975285845308,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,65180000,0.03896314114416648,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,71498000,1.0515106961036866,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,72715000,0.43984608151047444,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,3,70100000,0.9999999999999991,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+kmeans,3,70300000,0.9999999999999997,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+kmeans,3,71200000,1.0000000000000007,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+kmeans,3,71250000,0.9999999999999998,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+kmeans,4,83105000,0.9889459992710586,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,4,83345000,1.1558513970816238,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,4,83675000,0.25425577659511167,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,4,84071000,1.7716784627134834,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,4,84095000,0.941774702975498,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,4,84520000,1.7404072963902124,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,4,84551000,0.5396939434231441,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,4,84598002,0.6073924215498712,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,5,64652000,1.3410191731113956,1.6481,False,Valores altos pedem investigação dos dados e da região.
+kmeans,5,64659000,1.1365401638996144,1.6481,False,Valores altos pedem investigação dos dados e da região.
+kmeans,5,64671000,1.5847633081900374,1.6481,False,Valores altos pedem investigação dos dados e da região.
+kmeans,5,64682000,0.12647991100726755,1.6481,False,Valores altos pedem investigação dos dados e da região.
+kmeans,5,64785000,0.4523532879406648,1.6481,False,Valores altos pedem investigação dos dados e da região.
+kmeans,5,64810000,1.3588441558510183,1.6481,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,64773000,2.630161618473284,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,65855000,3.191869731947208,2.7573,True,Valores altos pedem investigação dos dados e da região.
+kmeans,6,65925000,0.5883764302079941,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,65945000,0.0732209356327405,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,65979000,0.9825334445762239,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,72870000,2.4818916205709227,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,73300000,0.05892211435085264,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,73600000,0.6916653375375527,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,73690001,0.6771226371330586,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,73780000,0.16991389677785262,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,73900000,0.10493569570720258,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,6,74320000,0.3493865370851122,2.7573,False,Valores altos pedem investigação dos dados e da região.
+kmeans,7,82770000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+ward,1,64360000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+ward,1,64380000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+ward,1,64508500,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+ward,2,64442800,1.6364239487588468,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,2,64453000,1.4664445824033288,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,2,64477600,1.2401687105924,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,2,65095000,0.47688998103401264,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,2,65135000,1.64975285845308,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,2,65180000,0.03896314114416648,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,2,71498000,1.0515106961036866,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,2,72715000,0.43984608151047444,2.1401,False,Valores altos pedem investigação dos dados e da região.
+ward,3,71200000,0.9999999999999863,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+ward,3,71250000,0.9999999999999858,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+ward,3,83105000,0.9999999999999993,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+ward,3,84520000,0.999999999999997,3.0,False,"Com quatro postos, D_i tem utilidade diagnóstica limitada."
+ward,4,70100000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+ward,4,70300000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+ward,5,64652000,1.3410191731113956,1.6481,False,Valores altos pedem investigação dos dados e da região.
+ward,5,64659000,1.1365401638996144,1.6481,False,Valores altos pedem investigação dos dados e da região.
+ward,5,64671000,1.5847633081900374,1.6481,False,Valores altos pedem investigação dos dados e da região.
+ward,5,64682000,0.12647991100726755,1.6481,False,Valores altos pedem investigação dos dados e da região.
+ward,5,64785000,0.4523532879406648,1.6481,False,Valores altos pedem investigação dos dados e da região.
+ward,5,64810000,1.3588441558510183,1.6481,False,Valores altos pedem investigação dos dados e da região.
+ward,6,82770000,0.992677752793778,1.9166,False,Valores altos pedem investigação dos dados e da região.
+ward,6,83345000,1.9445639004688127,1.9166,True,Valores altos pedem investigação dos dados e da região.
+ward,6,83675000,0.2801099683943715,1.9166,False,Valores altos pedem investigação dos dados e da região.
+ward,6,84071000,1.5293234443868828,1.9166,False,Valores altos pedem investigação dos dados e da região.
+ward,6,84095000,1.1229300821312278,1.9166,False,Valores altos pedem investigação dos dados e da região.
+ward,6,84551000,0.5489644760152084,1.9166,False,Valores altos pedem investigação dos dados e da região.
+ward,6,84598002,0.5814303758097197,1.9166,False,Valores altos pedem investigação dos dados e da região.
+ward,7,64773000,2.630161618473284,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,65855000,3.191869731947208,2.7573,True,Valores altos pedem investigação dos dados e da região.
+ward,7,65925000,0.5883764302079941,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,65945000,0.0732209356327405,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,65979000,0.9825334445762239,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,72870000,2.4818916205709227,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,73300000,0.05892211435085264,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,73600000,0.6916653375375527,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,73690001,0.6771226371330586,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,73780000,0.16991389677785262,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,73900000,0.10493569570720258,2.7573,False,Valores altos pedem investigação dos dados e da região.
+ward,7,74320000,0.3493865370851122,2.7573,False,Valores altos pedem investigação dos dados e da região.

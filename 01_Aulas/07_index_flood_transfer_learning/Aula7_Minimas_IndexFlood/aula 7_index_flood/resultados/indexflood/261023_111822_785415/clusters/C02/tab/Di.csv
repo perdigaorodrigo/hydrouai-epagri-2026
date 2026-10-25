@@ -1,0 +1,9 @@
+﻿metodo,regiao,id_bacia,D_i,limiar_10pct,sinalizado,observacao
+kmeans,2,64442800,1.6364239487588468,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,64453000,1.4664445824033288,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,64477600,1.2401687105924,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,65095000,0.47688998103401264,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,65135000,1.64975285845308,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,65180000,0.03896314114416648,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,71498000,1.0515106961036866,2.1401,False,Valores altos pedem investigação dos dados e da região.
+kmeans,2,72715000,0.43984608151047444,2.1401,False,Valores altos pedem investigação dos dados e da região.

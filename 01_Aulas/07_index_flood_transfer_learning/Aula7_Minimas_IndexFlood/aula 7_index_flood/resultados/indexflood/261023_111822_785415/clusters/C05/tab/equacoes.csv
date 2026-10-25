@@ -1,0 +1,5 @@
+﻿regiao,alvo,forma,n_bacias,status,equacao,n,RMSE_m3s,erro_rel_abs_mediano_pct,vies_pct
+5,indice_m3s,linear_simples,6,ajustado,indice_m3s = -360.835 +0.423719 × area_km2,6,131.17369419464143,84.23310012359447,-1.5913751495516612e-14
+5,indice_m3s,linear_multipla,6,ajustado,indice_m3s = -360.835 +0.423719 × area_km2,6,131.17369419464143,84.23310012359447,-1.5913751495516612e-14
+5,indice_m3s,potencial_simples,6,ajustado,indice_m3s = 0.000114266 × area_km2^(1.9782)  [com smearing],6,97.35980472531271,39.12248324719771,-2.2385258776439447
+5,indice_m3s,potencial_multipla,6,ajustado,indice_m3s = 0.000114266 × area_km2^(1.9782)  [com smearing],6,97.35980472531271,39.12248324719771,-2.2385258776439447

@@ -1,0 +1,150 @@
+﻿id_bacia,latitude,longitude,uf_posto,ufs_candidatas,situacao_uf,incluida_filtro_uf,motivo_filtro_uf
+60010000,-18.8411,-46.5508,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+60220000,-20.0139,-47.0172,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+60250000,-19.5175,-46.57,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+60265000,-19.475,-46.5419,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+60381000,-18.9883,-48.1903,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+60436000,-15.7789,-48.2322,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60476100,-15.7414,-47.6744,DF,DF,identificada_na_malha,False,UF do posto fora do recorte
+60635000,-16.3464,-49.4942,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60642000,-16.6317,-49.2439,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60654000,-16.9136,-49.1047,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60665000,-17.2536,-49.275,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60750000,-17.0792,-50.2894,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60774000,-17.3592,-51.0753,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60778000,-17.3308,-50.7742,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60810000,-18.1044,-50.0333,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60850000,-19.3597,-49.1803,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+60910000,-17.5794,-52.6014,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60930000,-18.4067,-52.5325,GO,GO,identificada_na_malha,False,UF do posto fora do recorte
+60960000,-18.845,-52.2131,MS,MS,identificada_na_malha,False,UF do posto fora do recorte
+61009000,-21.9464,-44.1947,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61024000,-21.9797,-44.6025,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61045000,-21.745,-44.3542,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61075000,-21.5061,-44.9156,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61085000,-21.2794,-43.8144,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61105000,-21.1647,-44.1358,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61115000,-21.0525,-44.2111,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61173000,-21.3422,-45.1714,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61271000,-22.4458,-45.4242,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61285000,-22.3772,-45.4475,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61320000,-22.6858,-45.7353,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+61370000,-22.3542,-45.8539,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61390000,-22.1167,-45.9178,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61460000,-21.8872,-45.0792,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61473000,-21.9511,-44.8797,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61500000,-21.87,-45.2622,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61520000,-21.6783,-45.2597,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61565000,-21.7886,-46.1244,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61610000,-21.2789,-46.3608,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61700000,-20.8097,-46.8067,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61795000,-19.9094,-48.3906,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61826000,-21.4203,-46.9622,MG,MG,identificada_na_malha,False,UF do posto fora do recorte
+61953001,-20.9917,-48.7075,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+61956001,-21.0772,-48.8008,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+62420000,-22.9589,-47.2964,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+62477100,-23.3639,-47.615,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+62490000,-23.6381,-47.5722,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+62600000,-22.8831,-46.6319,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+62622000,-22.6869,-46.6786,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+62670000,-23.1056,-46.5569,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+62767500,-22.0617,-48.0903,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+63250000,-19.3775,-53.5711,MS,MS,identificada_na_malha,False,UF do posto fora do recorte
+63790000,-21.8831,-51.265,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+63950010,-20.9942,-54.5072,MS,MS,identificada_na_malha,False,UF do posto fora do recorte
+64040000,-23.9697,-48.2783,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+64065000,-23.6253,-48.1053,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+64231000,-24.0328,-49.4614,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+64315000,-22.8786,-49.2381,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+64327000,-22.7514,-49.735,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+64346000,-22.5333,-50.9167,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+64360000,-23.7667,-49.95,PR,PR,identificada_na_malha,True,UF do posto incluída
+64380000,-23.8503,-50.3911,PR,PR,identificada_na_malha,True,UF do posto incluída
+64395000,-22.6167,-50.6833,SP,SP,identificada_na_malha,False,UF do posto fora do recorte
+64442800,-25.1994,-50.5247,PR,PR,identificada_na_malha,True,UF do posto incluída
+64453000,-24.8558,-50.2936,PR,PR,identificada_na_malha,True,UF do posto incluída
+64477600,-24.7503,-50.0894,PR,PR,identificada_na_malha,True,UF do posto incluída
+64504550,-23.4,-51.0053,PR,PR,identificada_na_malha,True,UF do posto incluída
+64508500,-23.17,-50.7881,PR,PR,identificada_na_malha,True,UF do posto incluída
+64618000,-22.5456,-54.025,MS,MS,identificada_na_malha,False,UF do posto fora do recorte
+64619950,-25.2328,-50.9525,PR,PR,identificada_na_malha,True,UF do posto incluída
+64652000,-24.1058,-51.4822,PR,PR,identificada_na_malha,True,UF do posto incluída
+64659000,-24.0164,-51.9461,PR,PR,identificada_na_malha,True,UF do posto incluída
+64671000,-24.0331,-52.2667,PR,PR,identificada_na_malha,True,UF do posto incluída
+64682000,-23.4414,-52.6047,PR,PR,identificada_na_malha,True,UF do posto incluída
+64700000,-22.9428,-55.2211,MS,MS,identificada_na_malha,False,UF do posto fora do recorte
+64723000,-23.6486,-55.3894,MS,MS,identificada_na_malha,False,UF do posto fora do recorte
+64764000,-24.9831,-52.2831,PR,PR,identificada_na_malha,True,UF do posto incluída
+64773000,-24.7272,-52.3094,PR,PR,identificada_na_malha,True,UF do posto incluída
+64785000,-24.5544,-52.9014,PR,PR,identificada_na_malha,True,UF do posto incluída
+64810000,-23.9167,-53.1331,PR,PR,identificada_na_malha,True,UF do posto incluída
+65006075,-25.4539,-49.1714,PR,PR,identificada_na_malha,True,UF do posto incluída
+65095000,-26.2156,-49.6036,PR,PR,identificada_na_malha,True,UF do posto incluída
+65135000,-25.9344,-49.3931,PR,PR,identificada_na_malha,True,UF do posto incluída
+65180000,-26.3722,-50.2881,SC,SC,identificada_na_malha,True,UF do posto incluída
+65809000,-25.3978,-51.4358,PR,PR,identificada_na_malha,True,UF do posto incluída
+65855000,-25.4925,-52.2139,PR,PR,identificada_na_malha,True,UF do posto incluída
+65925000,-26.2781,-52.2956,PR,PR,identificada_na_malha,True,UF do posto incluída
+65945000,-26.0506,-52.8008,PR,PR,identificada_na_malha,True,UF do posto incluída
+65979000,-25.4339,-53.5178,PR,PR,identificada_na_malha,True,UF do posto incluída
+70100000,-28.3694,-49.8025,SC,SC,identificada_na_malha,True,UF do posto incluída
+70300000,-28.09,-50.0611,SC,SC,identificada_na_malha,True,UF do posto incluída
+70500000,-28.1614,-50.4428,SC,SC,identificada_na_malha,True,UF do posto incluída
+71200000,-27.8028,-49.7786,SC,SC,identificada_na_malha,True,UF do posto incluída
+71250000,-27.8297,-49.6269,SC,SC,identificada_na_malha,True,UF do posto incluída
+71498000,-27.3339,-50.7539,SC,SC,identificada_na_malha,True,UF do posto incluída
+72430000,-27.8786,-51.7547,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+72630000,-27.7067,-51.8853,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+72715000,-26.8958,-51.0756,SC,SC,identificada_na_malha,True,UF do posto incluída
+72870000,-27.3156,-51.5267,SC,SC,identificada_na_malha,True,UF do posto incluída
+73300000,-26.9486,-52.1825,SC,SC,identificada_na_malha,True,UF do posto incluída
+73600000,-26.5606,-52.3258,SC,SC,identificada_na_malha,True,UF do posto incluída
+73690001,-26.7733,-52.0253,SC,SC,identificada_na_malha,True,UF do posto incluída
+73780000,-26.7369,-52.9017,SC,SC,identificada_na_malha,True,UF do posto incluída
+73900000,-26.9244,-53.0089,SC,SC,identificada_na_malha,True,UF do posto incluída
+74205000,-27.8131,-53.0294,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+74295000,-27.0133,-53.2953,SC,SC,identificada_na_malha,True,UF do posto incluída
+74320000,-26.6822,-53.2861,SC,SC,identificada_na_malha,True,UF do posto incluída
+74370000,-27.3328,-53.6444,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+74460000,-27.8247,-53.7303,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+74700000,-27.6728,-54.4644,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+74750000,-27.845,-54.5561,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+74880000,-28.0631,-54.7558,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+75200000,-28.4544,-53.9731,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+75295000,-28.3897,-54.3308,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+75450000,-28.5783,-54.9144,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+75600000,-28.8372,-54.855,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+76085000,-29.4289,-54.0542,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+76300000,-30.2808,-54.9031,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+76460000,-29.3625,-54.7353,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+82270050,-26.18,-48.9394,SC,SC,identificada_na_malha,True,UF do posto incluída
+82770000,-26.4481,-48.8311,SC,SC,identificada_na_malha,True,UF do posto incluída
+83029900,-27.0397,-50.1242,SC,SC,identificada_na_malha,True,UF do posto incluída
+83105000,-27.6839,-49.3631,SC,SC,identificada_na_malha,True,UF do posto incluída
+83345000,-26.6983,-49.8311,SC,SC,identificada_na_malha,True,UF do posto incluída
+83675000,-26.7414,-49.2711,SC,SC,identificada_na_malha,True,UF do posto incluída
+84071000,-27.4142,-48.9528,SC,SC,identificada_na_malha,True,UF do posto incluída
+84095000,-27.2861,-48.9336,SC,SC,identificada_na_malha,True,UF do posto incluída
+84150100,-27.6925,-48.7097,SC,SC,identificada_na_malha,True,UF do posto incluída
+84249998,-28.3586,-49.295,SC,SC,identificada_na_malha,True,UF do posto incluída
+84520000,-27.9956,-49.1161,SC,SC,identificada_na_malha,True,UF do posto incluída
+84551000,-28.2094,-49.195,SC,SC,identificada_na_malha,True,UF do posto incluída
+84598002,-28.1656,-48.9717,SC,SC,identificada_na_malha,True,UF do posto incluída
+84949000,-28.9422,-49.7022,SC,SC,identificada_na_malha,True,UF do posto incluída
+85400000,-29.6269,-53.3528,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+85438000,-29.8011,-53.3689,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+85470000,-30.3597,-54.3133,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+85623000,-30.1942,-53.5633,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86100000,-28.8056,-50.495,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86160000,-28.8681,-50.4561,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86410000,-28.7392,-51.425,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86420000,-28.6775,-51.6081,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86480000,-28.6189,-51.8558,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86560000,-28.9122,-51.9531,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86700000,-29.1886,-51.9219,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+86745000,-29.2161,-52.1622,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+87160000,-29.3356,-51.1889,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+87317060,-29.7708,-50.085,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+87380000,-29.6917,-51.0461,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+87399000,-29.9644,-50.9778,RS,RS,identificada_na_malha,False,UF do posto fora do recorte
+88850000,-31.5736,-52.4625,RS,RS,identificada_na_malha,False,UF do posto fora do recorte

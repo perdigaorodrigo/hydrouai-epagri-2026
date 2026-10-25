@@ -1,0 +1,4 @@
+﻿metodo,regiao,id_bacia,D_i,limiar_10pct,sinalizado,observacao
+kmeans,1,64360000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+kmeans,1,64380000,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.
+kmeans,1,64508500,,3.0,False,Poucos postos ou matriz singular; não foi usada pseudoinversa.

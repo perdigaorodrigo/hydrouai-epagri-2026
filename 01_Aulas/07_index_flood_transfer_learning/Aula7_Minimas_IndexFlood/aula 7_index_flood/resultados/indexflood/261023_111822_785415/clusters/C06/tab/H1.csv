@@ -1,0 +1,2 @@
+﻿metodo,regiao,n_postos,H1,V_obs,media_V,dp_V,classe,metodo_simulacao,motivo
+kmeans,6,12,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3

@@ -1,0 +1,15 @@
+﻿metodo,regiao,n_postos,H1,V_obs,media_V,dp_V,classe,metodo_simulacao,motivo
+kmeans,1,3,,,,,não calculado,,3 postos; mínimo operacional configurado: 5.
+kmeans,2,8,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
+kmeans,3,4,,,,,não calculado,,4 postos; mínimo operacional configurado: 5.
+kmeans,4,8,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
+kmeans,5,6,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
+kmeans,6,12,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
+kmeans,7,1,,,,,não calculado,,1 postos; mínimo operacional configurado: 5.
+ward,1,3,,,,,não calculado,,3 postos; mínimo operacional configurado: 5.
+ward,2,8,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
+ward,3,4,,,,,não calculado,,4 postos; mínimo operacional configurado: 5.
+ward,4,2,,,,,não calculado,,2 postos; mínimo operacional configurado: 5.
+ward,5,6,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
+ward,6,7,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
+ward,7,12,,,,,não calculado,,O cálculo de H1 requer lmoments3. Instale com: pip install lmoments3
