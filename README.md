@@ -36,3 +36,5 @@ Aula 4 (16/10/2026): https://drive.google.com/file/d/1TyP_BI6JIzgURQ9sRWXjQQpaok
 Aula 5 (19/10/2026): https://drive.google.com/file/d/1yeOE_Z3VN3suhBH-yzWoy3FTlZTzcDnW/view
 
 Aula 6 (23/10/2026): https://drive.google.com/file/d/1LWbHIAFN-9xxox9Irz_BLHSRGMhjEe4K/view
+
+Aula 7 (26/10/2026): https://drive.google.com/file/d/1w6L9ETtgXYd9-OX-y60PTB0mbc3ddCWD/view?usp=drivesdk
