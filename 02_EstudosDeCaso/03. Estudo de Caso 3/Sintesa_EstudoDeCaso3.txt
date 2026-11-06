@@ -1,0 +1,59 @@
+ESTUDO DE CASO 3 — ALEJANDRO
+MODELAGEM E PREVISÃO DA DESCARGA DE SEDIMENTOS
+
+1. OBJETIVO
+
+Objetivo geral
+Desenvolver e avaliar estratégias de modelagem da descarga de sedimentos em bacias hidrográficas de diferentes dimensões, com ênfase na escassez de observações sedimentológicas e na transferência de conhecimento entre bacias.
+
+Objetivos específicos
+- Caracterizar a relação entre vazão líquida e descarga de sedimentos nas bacias monitoradas.
+- Estabelecer curvas-chave de sedimentos como referência metodológica.
+- Testar modelos estatísticos e de IA usando atributos hidrológicos, hidrossedimentológicos e, se disponíveis, características das bacias.
+- Examinar diferenças de desempenho entre grupos de bacias com escalas espaciais distintas.
+- Avaliar a viabilidade da previsão diária considerando a disponibilidade aparentemente mensal de algumas observações de sedimentos.
+
+2. DADOS DISPONÍVEIS OU INDICADOS NAS ANOTAÇÕES
+
+- Tema: modelagem da descarga de sedimentos.
+- Aproximadamente 70 bacias, com menção a um conjunto de 62 (confirmar relação entre ambos).
+- Dois intervalos de área anotados: 250–2.400 km² e 0,5–80 km².
+- Três estações hidrossedimentológicas (conforme leitura da anotação).
+- Registros sedimentológicos aparentemente mensais.
+- Quantidade ou intervalo temporal anotado como “75–95”; interpretação de 75 a 95 observações mensais é incerta e deve ser confirmada.
+- Resolução-alvo anotada: previsão diária.
+- Método tradicional citado: curva-chave de sedimentos.
+
+3. POSSÍVEL POSSÍVEL PROPOSTA METODOLÓGICA
+
+Etapa 1 — Inventário dos dados e consistência temporal
+Listar bacias, estações, áreas de drenagem, séries de vazão, concentrações/descargas de sedimentos e frequências amostrais. Distinguir medições de concentração de sedimentos em suspensão, descarga sólida e eventuais estimativas indiretas. Verificar limites de detecção, unidades, lacunas e possíveis mudanças de instrumento ou procedimento de coleta.
+
+Etapa 2 — Análise exploratória hidrossedimentológica
+Examinar a distribuição da descarga de sedimentos, a relação com vazões e eventos extremos, sazonalidade, histerese quando houver resolução suficiente, e contrastes entre grupos de áreas de drenagem. Diagnosticar a representatividade dos registros mensais frente à variabilidade diária.
+
+Etapa 3 — Modelos de referência
+Ajustar curvas-chave de sedimentos (por exemplo, relações do tipo potência entre vazão líquida e descarga sólida), registrando parâmetros, intervalos de confiança e eventuais vieses de retransfomação. Considerar variantes sazonais ou por regime hidrológico se os dados justificarem.
+
+Etapa 4 — Modelos preditivos e transferência entre bacias
+Comparar abordagens estatísticas parcimoniosas e métodos de IA, como regressão regularizada, Random Forest e XGBoost. Quando disponíveis, testar preditores relacionados a vazão, chuva, uso e cobertura do solo, declividade, solos e propriedades das bacias. Avaliar modelos locais, regionais e transferidos entre bacias.
+
+Etapa 5 — Tratamento do desencontro de escalas temporais
+Se os sedimentos foram observados apenas mensalmente, não considerar uma série diária interpolada como verdade observada. Primeiro avaliar modelos na frequência efetivamente medida e somente depois estudar estimativas diárias condicionadas à vazão diária, sob hipóteses explícitas, incertezas e validação com dados diários independentes, se existirem. Sem tal validação, apresentar saídas diárias como estimativas exploratórias, não como previsões diárias verificadas.
+
+Etapa 6 — Validação espacial e temporal
+Separar dados cronologicamente e, quando possível, realizar validação deixando bacias de fora para testar generalização. Comparar MAE, RMSE, viés, desempenho em altas descargas e incerteza das estimativas. Inspecionar erros por faixa de área de drenagem e por período hidrológico.
+
+4. RESULTADO ESPERADO
+
+Um conjunto comparativo de métodos para estimar e prever descarga de sedimentos com registros limitados, esclarecendo em que condições curvas-chave, modelos de IA e transferência entre bacias trazem benefícios e quais escalas temporais são realmente sustentadas pelos dados.
+
+5. PONTOS A CONFIRMAR
+
+- Se 70 e 62 correspondem a total e subconjunto de bacias.
+- A quais grupos pertencem os dois intervalos de área.
+- Se “75–95” representa quantidade de observações, anos de início/fim ou outra característica.
+- Se existem dados diários de vazão e/ou de sedimentos suficientes para validar estimativas diárias.
+- Se as três estações indicadas são as únicas com dados sedimentológicos ou apenas as com maior resolução.
+
+NOTA: A seção 2 reproduz a interpretação das anotações; as seções 1, 3 e 4 apresentam uma estrutura de pesquisa proposta, ainda não validada pelos pesquisadores.

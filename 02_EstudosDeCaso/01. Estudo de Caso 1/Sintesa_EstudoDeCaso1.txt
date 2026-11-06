@@ -1,0 +1,60 @@
+ESTUDO DE CASO 1 — ALEXANDRE
+PREVISÃO DE VAZÕES E CHEIAS EM PEQUENAS BACIAS URBANAS
+
+1. OBJETIVO
+
+Objetivo geral
+Desenvolver e avaliar uma metodologia de previsão de vazões e de eventos de cheia em pequenos córregos urbanos, considerando o curto tempo de resposta hidrológica e a disponibilidade limitada de dados observados.
+
+Objetivos específicos
+- Caracterizar a resposta chuva–vazão das bacias e o comportamento dos eventos de inundação registrados.
+- Estabelecer modelos de referência (por exemplo, curva-chave e modelos hidrológicos) para comparação com métodos baseados em inteligência artificial (IA).
+- Avaliar a qualidade das previsões para diferentes antecedências compatíveis com a resposta rápida das bacias.
+- Investigar o aproveitamento de informações complementares, inclusive imagens, caso haja material adequado.
+- Quantificar as incertezas de previsão, com especial atenção aos picos de vazão.
+
+2. DADOS DISPONÍVEIS OU INDICADOS NAS ANOTAÇÕES
+
+- Área de estudo: pequenos córregos urbanos.
+- Área de drenagem: até aproximadamente 1 km².
+- Série observacional: cerca de 20 meses de dados.
+- Eventos de inundação: referência a aproximadamente 7 episódios (confirmar).
+- Tempo característico de resposta hidrológica: entre 1,5 e 2,5 horas.
+- Precipitação (P) e outra variável identificada de forma pouco legível nas notas (confirmar qual é, assim como sua resolução temporal).
+- Curva-chave mencionada como possível fonte para converter nível em vazão.
+- Modelos citados nas notas: HEC-RAS e GR4H.
+- Uso de imagens mencionado como possibilidade, mas sem especificação da fonte ou da cobertura temporal.
+
+3. PROPOSTA METODOLÓGICA
+
+Etapa 1 — Inventário, controle de qualidade e sincronização
+Reunir chuva, nível d'água, vazão estimada/observada, eventos de cheia e eventuais imagens. Verificar unidades, intervalos de medição, lacunas e consistência temporal. Documentar quais vazões são medidas diretamente e quais são inferidas por curva-chave.
+
+Etapa 2 — Análise hidrológica dos eventos
+Delimitar os eventos de precipitação e cheia e calcular indicadores como chuva acumulada, intensidades máximas, atraso entre chuva e pico, pico de vazão e duração da resposta. Avaliar a variabilidade entre eventos e entre bacias.
+
+Etapa 3 — Modelos de referência
+Construir referências simples e transparentes, como persistência, relações chuva–vazão e curva-chave, quando cabível. Avaliar o emprego do GR4H como modelo hidrológico e do HEC-RAS para análise hidráulica/propagação, conforme dados e características do trecho. Esses modelos não precisam ser etapas sequenciais obrigatórias.
+
+Etapa 4 — Modelos preditivos com IA
+Testar modelos parcimoniosos adequados a séries curtas (por exemplo, regressão regularizada, Random Forest/XGBoost e redes neurais compactas). Usar defasagens de chuva, chuva acumulada, estados antecedentes e observações disponíveis de nível/vazão. Caso haja imagens datadas e alinhadas às observações, testar sua contribuição como preditores adicionais.
+
+Etapa 5 — Treinamento e validação por eventos
+Separar treinamento, validação e teste cronologicamente e por eventos completos, evitando que trechos do mesmo evento contaminem mais de uma partição. Devido ao pequeno número de cheias, explicitar a incerteza dos resultados e avaliar a viabilidade de validação por evento deixado de fora.
+
+Etapa 6 — Avaliação operacional
+Comparar previsões para antecedências curtas (a definir de acordo com a frequência dos dados e com a resposta de 1,5–2,5 h). Avaliar MAE, RMSE, NSE/KGE quando apropriados, erro relativo de pico, erro no instante do pico e desempenho na identificação de ultrapassagem de limiares de alerta.
+
+4. RESULTADO ESPERADO
+
+Um procedimento reprodutível para previsão de cheias em pequenas bacias urbanas, com comparação entre referências hidrológicas/hidráulicas e modelos de IA e indicação explícita de como a escassez de dados limita a confiabilidade das previsões.
+
+5. PONTOS A CONFIRMAR
+
+- Número exato de eventos de inundação.
+- Significado da variável anotada como “C” e disponibilidade de medições de vazão e nível.
+- Resolução temporal de precipitação e vazão e número de pontos de monitoramento.
+- Papel efetivamente pretendido para HEC-RAS, GR4H e imagens.
+- Antecedência mínima de previsão operacionalmente necessária.
+
+NOTA: A seção 2 reproduz a interpretação das anotações; as seções 1, 3 e 4 apresentam uma estrutura de pesquisa proposta, ainda não validada pelos pesquisadores.

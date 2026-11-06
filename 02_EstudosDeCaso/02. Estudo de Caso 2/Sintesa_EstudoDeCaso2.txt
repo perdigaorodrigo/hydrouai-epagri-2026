@@ -1,0 +1,62 @@
+ESTUDO DE CASO 2 — ANA CLARA
+PREVISÃO HIDROLÓGICA COM ENSEMBLES E MODELOS METEOROLÓGICOS
+
+1. OBJETIVO
+
+Objetivo geral
+Avaliar e aprimorar a previsão de vazões em diferentes bacias hidrográficas a partir de previsões meteorológicas convencionais e baseadas em IA, com atenção especial à magnitude e ao instante de ocorrência dos picos de vazão.
+
+Objetivos específicos
+- Comparar o desempenho das fontes meteorológicas mencionadas nas notas, incluindo GEFS, ECMWF/IFS e GraphCast, conforme a efetiva disponibilidade dos produtos.
+- Investigar o valor agregado de combinações de membros e fontes de previsão (ensembles).
+- Avaliar como os erros meteorológicos são propagados para a previsão hidrológica.
+- Quantificar viés, antecedência útil, magnitude e defasagem temporal dos picos de vazão.
+- Analisar a variabilidade do desempenho entre bacias e horizontes de previsão.
+
+2. DADOS DISPONÍVEIS OU INDICADOS NAS ANOTAÇÕES
+
+- Área de estudo: conjunto de bacias hidrográficas.
+- Quantidade: cerca de 70 bacias; aparece também a referência a 62 bacias, cujo significado deve ser confirmado.
+- Precipitação: séries históricas de aproximadamente 7 a 10 anos.
+- Vazão: referência a 6 estações com registros horários.
+- Horizonte de previsão: anotação interpretada como 24 dias (confirmar se são dias, horas ou outra indicação).
+- Produtos/fontes de previsão meteorológica citados: GEFS, ECMWF, IFS e GraphCast.
+- Problema destacado nas notas: atraso na previsão dos picos de vazão.
+- Há referência a impactos ambientais possivelmente associados à monocultura, mas sem contexto suficiente para incorporá-la como variável do estudo.
+
+3. POSSÍVEL PROPOSTA METODOLÓGICA
+
+Etapa 1 — Definição do desenho experimental
+Confirmar as bacias e estações, a resolução das séries de chuva e vazão, o horizonte-alvo e a disponibilidade histórica dos produtos meteorológicos. Diferenciar previsões efetivamente emitidas em cada data (hindcasts/reforecasts ou arquivos operacionais) de dados de reanálise, evitando usar informação futura como se fosse previsão.
+
+Etapa 2 — Controle e integração das bases
+Aplicar controle de qualidade às séries de precipitação e vazão, delimitar bacias e agregar previsões meteorológicas às respectivas áreas. Uniformizar os fusos, passos temporais, acumulados de chuva e unidades. Documentar eventuais diferenças de resolução espacial e temporal entre os produtos.
+
+Etapa 3 — Diagnóstico das previsões meteorológicas
+Comparar GEFS, ECMWF/IFS e, quando possível, GraphCast em termos de precipitação acumulada, viés, detecção de eventos e deslocamento temporal. Evitar tratar ECMWF e IFS como produtos necessariamente independentes: IFS é um sistema de previsão do ECMWF, e a comparação depende de quais produtos específicos serão selecionados.
+
+Etapa 4 — Construção dos modelos hidrológicos
+Empregar pelo menos um modelo hidrológico de referência e, se houver dados suficientes, um modelo estatístico/de IA para converter entradas meteorológicas em vazão. Calibrar exclusivamente com períodos de treinamento e manter a mesma estrutura de avaliação para todas as fontes meteorológicas.
+
+Etapa 5 — Previsões determinísticas e em ensemble
+Produzir previsões com fontes individuais, membros do ensemble e combinações de membros/fontes (por exemplo, média, mediana, ponderação ou pós-processamento estatístico). Para os horizontes e produtos efetivamente disponíveis, estimar também intervalos probabilísticos de vazão.
+
+Etapa 6 — Avaliação dos picos e das incertezas
+Comparar MAE/RMSE, NSE/KGE quando adequados, viés de volume, erro de magnitude do pico e erro de tempo do pico. Para previsões probabilísticas, considerar cobertura de intervalos e escores próprios (por exemplo, CRPS). Avaliar desempenho por estação, evento, estação do ano e antecedência.
+
+Etapa 7 — Teste de generalização
+Executar validação cronológica e, se houver cobertura espacial suficiente, verificar capacidade de generalização entre bacias. Produzir análises de sensibilidade que indiquem quando o ensemble acrescenta valor em relação às fontes isoladas.
+
+4. RESULTADO ESPERADO
+
+Uma avaliação comparativa de fontes meteorológicas e estratégias de ensemble para previsão hidrológica, identificando possíveis ganhos de antecedência e de representação dos picos de vazão, bem como os limites de cada sistema meteorológico.
+
+5. PONTOS A CONFIRMAR
+
+- Significado dos números 70 e 62 (bacias totais, subconjunto ou outras unidades).
+- Se as 6 estações horárias estão dentro do conjunto de bacias e quais são as variáveis registradas.
+- Se o horizonte anotado é realmente 24 dias.
+- Quais produtos específicos de GEFS, ECMWF/IFS e GraphCast possuem arquivos compatíveis com o período estudado.
+- Se o aspecto ambiental/monocultura integra formalmente o projeto.
+
+NOTA: A seção 2 reproduz a interpretação das anotações; as seções 1, 3 e 4 apresentam uma estrutura de pesquisa proposta, ainda não validada pelos pesquisadores.
